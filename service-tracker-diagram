@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2020-09-11T15:01:44.064Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" version="13.6.9" etag="AIGvXAnw7vEdIocTmQ2V" type="github"><diagram id="YoF0OPnRmrzXjeVrBjR9">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-09-11T15:18:03.543Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" etag="yNuZ3XKOQ7YdDpItPndh" version="13.6.9" type="github">
+  <diagram id="YoF0OPnRmrzXjeVrBjR9" name="Page-1">
+    <mxGraphModel dx="1426" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="150" width="400" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-2" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Pepsi&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="230" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="310" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="390" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-6" value="&lt;font style=&quot;font-size: 28px&quot;&gt;Soda List&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-7" value="Clicking On this component shows the details of soda" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="260" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-8" value="&lt;font style=&quot;font-size: 30px&quot;&gt;Header&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-9" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Add Soda&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-10" value="Clicking on this button will bring up a form to add a new soda to the list" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="510" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-11" value="Sell&lt;br&gt;Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-14" value="Sell&lt;br&gt;Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bHLPlH_-r046arZ-3NQ9-15" value="Sell&lt;br&gt;Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="400" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
