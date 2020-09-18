@@ -8,7 +8,7 @@ class SodaControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterSodaList: []
+      masterSodaList: [],
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -28,7 +28,7 @@ class SodaControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
-    
+
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
       buttonText = "Return to Soda List"

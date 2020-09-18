@@ -6,7 +6,7 @@ function SodaList(props){
   return (
     <React.Fragment>
       <hr/>
-      {props.masterSodaList.map((soda, index) =>
+      {props.sodaList.map((soda, index) =>
       <Soda names={soda.names}
         price={soda.price}
         slogan={soda.slogan}
