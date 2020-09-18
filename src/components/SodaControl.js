@@ -13,10 +13,10 @@ class SodaControl extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleAddingNewSodaToList = (newTicket) => {
+  handleAddingNewSodaToList = (newSoda) => {
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
     this.setState({masterSodaList: newMasterSodaList,
-                  formVisableOnPage: false});
+      formVisableOnPage: false});
   }
 
   handleClick = () => {
@@ -28,6 +28,7 @@ class SodaControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
+    
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
       buttonText = "Return to Soda List"
@@ -43,3 +44,5 @@ class SodaControl extends React.Component {
     );
   }
 }
+
+export default SodaControl;
