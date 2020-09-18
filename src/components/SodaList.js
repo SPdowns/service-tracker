@@ -8,9 +8,9 @@ function SodaList(props){
       <hr/>
       {props.masterSodaList.map((soda, index) =>
       <Soda names={soda.names}
-            price={soda.price}
-            slogan={soda.slogan}
-            key={index}/>
+        price={soda.price}
+        slogan={soda.slogan}
+        key={index}/>
     )}
     </React.Fragment>
   );
