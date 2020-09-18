@@ -11,18 +11,26 @@ class SodaControl extends React.Component {
     };
   }
 
+  handleClick = () => {
+    this.setState(prevState => ({
+      formVisableOnPage: !prevState.formVisableOnPage
+    }));
+  }
+
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm />
+      buttonText = "Return to Soda List"
     } else {
       currentlyVisibleState = <SodaList />
+      buttonText = "Add Soda"
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {addSodaButton}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
