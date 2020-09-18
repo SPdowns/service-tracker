@@ -1,19 +1,12 @@
 import React from "react"
 import Soda from "./Soda"
+import PropTypes from "prop-types";
 
-const masterSodaList = [
-  {
-    names: 'Pepsi',
-    price: '1.50',
-    slogan: "Hey, Why not? It's the 90's!"
-  }
-]
-
-function SodaList(){
+function SodaList(props){
   return (
     <React.Fragment>
       <hr/>
-      {masterSodaList.map((soda, index) =>
+      {props.masterSodaList.map((soda, index) =>
       <Soda names={soda.names}
             price={soda.price}
             slogan={soda.slogan}
@@ -21,6 +14,10 @@ function SodaList(){
     )}
     </React.Fragment>
   );
+}
+
+SodaList.propTypes = {
+  sodaList: PropTypes.array
 }
 
 export default SodaList

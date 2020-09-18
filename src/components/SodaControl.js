@@ -7,9 +7,16 @@ class SodaControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      masterSodaList: []
     };
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleAddingNewSodaToList = (newTicket) => {
+    const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
+    this.setState({masterSodaList: newMasterSodaList,
+                  formVisableOnPage: false});
   }
 
   handleClick = () => {
@@ -22,10 +29,10 @@ class SodaControl extends React.Component {
     let currentlyVisibleState = null;
     let addSodaButton = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewSodaForm />
+      currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
       buttonText = "Return to Soda List"
     } else {
-      currentlyVisibleState = <SodaList />
+      currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList}/>
       buttonText = "Add Soda"
     }
     return (

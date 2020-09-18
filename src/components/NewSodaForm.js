@@ -1,9 +1,11 @@
 import React from "react";
 import { v4 } from "uuid";
+import PropTypes from "prop-types"
 
-function NewSodaForm(){
+function NewSodaForm(props){
   function handleNewSodaFormSubmission(event) {
     event.preventDefault();
+    props.onNewSodaCreation({names: event.target.names.value, price: event.target.price.value, slogan: event.target.slogan.value, id: v4()})
   }
   return (
     <React.Fragment>
@@ -23,6 +25,10 @@ function NewSodaForm(){
       </form>
     </React.Fragment>
   );
+}
+
+NewSodaForm.propTypes = {
+  onNewSodaCreation: PropTypes.func
 }
 
 export default NewSodaForm;
