@@ -1,15 +1,23 @@
 import React from "react"
 import Soda from "./Soda"
 
+const masterSodaList = [
+  {
+    names: 'Pepsi',
+    price: '1.50',
+    slogan: "Hey, Why not? It's the 90's!"
+  }
+]
+
 function SodaList(){
   return (
     <React.Fragment>
       <hr/>
       {masterSodaList.map((soda, index) =>
       <Soda names={soda.names}
-        location={soda.price}
-        issue={soda.slogan}
-        key={index}/>
+            price={soda.price}
+            slogan={soda.slogan}
+            key={index}/>
     )}
     </React.Fragment>
   );

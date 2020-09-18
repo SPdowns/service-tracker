@@ -4,14 +4,14 @@ import PropTypes from "prop-types"
 function Soda(props){
   return (
     <React.Fragment>
-      <h3>{props.name} - {props.price}</h3>
+      <h3>{props.names} - {props.price}</h3>
       <p><em>{props.slogan}</em></p>
     </React.Fragment>
   );
 }
 
 Soda.propTypes = {
-  name: PropTypes.string,
+  names: PropTypes.string,
   price: PropTypes.string,
   slogan: PropTypes.string
 };
