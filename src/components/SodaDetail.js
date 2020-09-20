@@ -7,13 +7,15 @@ function SodaDetail(props){
       <h1>Sodas</h1>
       <h3>{props.names} - {props.price}</h3>
       <p><em>{props.slogan}</em></p>
+      <button onClick={()=> onClickDelete(soda.id)}>Close Ticket</button>
       <hr/>
     </React.Fragment>
   );
 }
 
 SodaDetail.propTypes = {
-  soda: PropTypes.object
+  soda: PropTypes.object,
+  onClickDelete: PropTypes.func
 };
 
 export default SodaDetail;
