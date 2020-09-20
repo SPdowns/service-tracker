@@ -2,6 +2,7 @@ import React from "react";
 import NewSodaForm from "./NewSodaForm";
 import SodaList from "./SodaList";
 import SodaDetail from "./SodaDetail";
+import EditSodaForm from './EditSodaForm'
 
 class SodaControl extends React.Component {
 
@@ -10,7 +11,8 @@ class SodaControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       masterSodaList: [],
-      selectedSoda: null
+      selectedSoda: null,
+      editing: false
     };
   }
 
@@ -46,11 +48,16 @@ class SodaControl extends React.Component {
     })
   }
 
+  handleEditClick = () => {
+    console.log("handleEditClick breached the hull!!")
+    this.setState({editing: true});
+  }
+
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
     if (this.state.selectedSoda != null) {
-      currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickDelete = {this.handleDeletingSoda}/>
+      currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickDelete = {this.handleDeletingSoda} onClickEdit = {this.handleEditClick} />
       addSodaButton = "Return to Soda List"
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
