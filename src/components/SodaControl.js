@@ -10,13 +10,6 @@ class SodaControl extends React.Component {
       formVisibleOnPage: false,
       masterSodaList: [],
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleAddingNewSodaToList = (newSoda) => {
-    const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
-    this.setState({masterSodaList: newMasterSodaList,
-      formVisableOnPage: false});
   }
 
   handleClick = () => {
@@ -25,21 +18,26 @@ class SodaControl extends React.Component {
     }));
   }
 
+  handleAddingNewSodaToList = (newSoda) => {
+    const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
+    this.setState({masterSodaList: newMasterSodaList,
+      formVisableOnPage: false});
+  }
+
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
-
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
-      buttonText = "Return to Soda List"
+      addSodaButton = "Return to Soda List"
     } else {
       currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList}/>
-      buttonText = "Add Soda"
+      addSodaButton = "Add Soda"
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button onClick={this.handleClick}>{addSodaButton}</button>
       </React.Fragment>
     );
   }

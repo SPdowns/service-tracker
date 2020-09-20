@@ -18,6 +18,6 @@ function SodaList(props){
 
 SodaList.propTypes = {
   sodaList: PropTypes.array
-}
+};
 
 export default SodaList

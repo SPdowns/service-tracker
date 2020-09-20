@@ -6,6 +6,7 @@ function Soda(props){
     <React.Fragment>
       <h3>{props.names} - {props.price}</h3>
       <p><em>{props.slogan}</em></p>
+      <hr/>
     </React.Fragment>
   );
 }
