@@ -7,7 +7,7 @@ function SodaList(props){
   return (
     <React.Fragment>
       <h1>Soda Detail</h1>
-      <h3>{soda.name} - {soda.price}</h3>
+      <h3>{soda.names} - {soda.price}</h3>
       <p><em>{soda.slogan}</em></p>
       <hr/>
     </React.Fragment>
