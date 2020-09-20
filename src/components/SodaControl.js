@@ -39,7 +39,7 @@ class SodaControl extends React.Component {
   }
 
   handleDeletingSoda = (id) => {
-    const newMasterSodaList = this.state.masterSodaList.filter(ticket => ticket.id !== id);
+    const newMasterSodaList = this.state.masterSodaList.filter(soda => soda.id !== id);
     this.setState({
       masterSodaList: newMasterSodaList,
       selectedSoda: null

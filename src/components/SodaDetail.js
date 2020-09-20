@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 function SodaDetail(props){
+  const {soda, onClickDelete} = props
   return (
     <React.Fragment>
       <h1>Sodas</h1>
       <h3>{props.names} - {props.price}</h3>
       <p><em>{props.slogan}</em></p>
-      <button onClick={()=> onClickDelete(soda.id)}>Close Ticket</button>
+      <button onClick={()=> onClickDelete(soda.id)}>Close Soda</button>
       <hr/>
     </React.Fragment>
   );
