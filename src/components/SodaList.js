@@ -3,21 +3,20 @@ import Soda from "./Soda"
 import PropTypes from "prop-types";
 
 function SodaList(props){
+  const { soda } = props;
   return (
     <React.Fragment>
+      <h1>Soda Detail</h1>
+      <h3>{soda.name} - {soda.price}</h3>
+      <p><em>{soda.slogan}</em></p>
       <hr/>
-      {props.sodaList.map((soda, index) =>
-      <Soda names={soda.names}
-        price={soda.price}
-        slogan={soda.slogan}
-        key={index}/>
-    )}
     </React.Fragment>
   );
 }
 
 SodaList.propTypes = {
-  sodaList: PropTypes.array
+  sodaList: PropTypes.array,
+  onSodaSelection: PropTypes.func
 };
 
 export default SodaList
