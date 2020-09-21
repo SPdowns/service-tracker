@@ -20,7 +20,8 @@ class SodaControl extends React.Component {
     if (this.state.selectedSoda != null) {
       this.setState({
         formVisableOnPage: false,
-        selectedSoda: null
+        selectedSoda: null,
+        editing: false
       });
     } else {
       this.setState(prevState => ({
@@ -53,10 +54,24 @@ class SodaControl extends React.Component {
     this.setState({editing: true});
   }
 
+  handleEditingSodaInList = (sodaToEdit) => {
+    const editedMasterSodaList = this.state.masterSodaList
+      .filter(soda => soda.id !== this.state.selectedSoda.id)
+      .concat(sodaToEdit);
+    this.setState({
+      masterSodaList: editedMasterSodaList,
+      editing: false,
+      selectedSoda: null
+    })
+  }
+
   render(){
     let currentlyVisibleState = null;
     let addSodaButton = null;
-    if (this.state.selectedSoda != null) {
+    if (this.state.editing) {
+      currentlyVisibleState = <EditSodaForm soda = {this.state.selectedSoda} onEditTicket = {this.handleEditingSodaInList}/>
+      addSodaButton = "Return to Soda List"
+    } else if (this.state.selectedSoda != null) {
       currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickDelete = {this.handleDeletingSoda} onClickEdit = {this.handleEditClick} />
       addSodaButton = "Return to Soda List"
     } else if (this.state.formVisibleOnPage) {
