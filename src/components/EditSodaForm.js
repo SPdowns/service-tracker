@@ -2,7 +2,7 @@ import React from 'react';
 import ReusableForm from './ReusableForm';
 
 function EditSodaForm (props) {
-  const { ticket } = props;
+  const { soda } = props;
 
   function handleEditSodaFormSubmisson(event) {
     event.preventDefault();
@@ -10,9 +10,9 @@ function EditSodaForm (props) {
       names: event.target.names.value,
       price: event.target.price.value,
       slogan: event.target.slogan.value,
-      id: ticket.id});
+      id: soda.id});
   }
-  
+
   return (
     <React.Fragment>
       <ReusableForm
