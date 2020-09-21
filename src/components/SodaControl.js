@@ -37,7 +37,7 @@ class SodaControl extends React.Component {
   }
 
   handleChangingSelectedSoda = (id) => {
-    const selectedSoda = this.state.masterSodaList(soda => soda.id)[0];
+    const selectedSoda = this.state.masterSodaList.filter(soda => soda.id)[0];
     this.setState({selectedSoda: selectedSoda});
   }
 
