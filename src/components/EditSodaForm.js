@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import ReusableForm from './ReusableForm';
 
 function EditSodaForm (props) {
@@ -17,9 +18,13 @@ function EditSodaForm (props) {
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleEditSodaFormSubmisson}
-        addSodaButton="Update Soda" />
+        buttonText="Update Soda" />
     </React.Fragment>
   )
 }
+
+EditSodaForm.propTypes = {
+  onEditSoda: PropTypes.func
+};
 
 export default EditSodaForm;

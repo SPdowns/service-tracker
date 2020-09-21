@@ -3,7 +3,6 @@ import Soda from "./Soda"
 import PropTypes from "prop-types";
 
 function SodaList(props){
-  const { soda } = props
   return (
     <React.Fragment>
       <hr/>

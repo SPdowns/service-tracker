@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 function Soda(props){
   return (
     <React.Fragment>
-      <div onClick = {()=> props.whenSodaClicked(props.id)}>
+      <div onClick={()=> props.whenSodaClicked(props.id)}>
         <h3>{props.names} - {props.price}</h3>
         <p><em>{props.slogan}</em></p>
         <hr/>

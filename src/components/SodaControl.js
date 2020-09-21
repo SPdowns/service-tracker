@@ -37,7 +37,7 @@ class SodaControl extends React.Component {
   }
 
   handleChangingSelectedSoda = (id) => {
-    const selectedSoda = this.state.masterSodaList(soda => soda.id) [0];
+    const selectedSoda = this.state.masterSodaList(soda => soda.id)[0];
     this.setState({selectedSoda: selectedSoda});
   }
 
@@ -67,24 +67,24 @@ class SodaControl extends React.Component {
 
   render(){
     let currentlyVisibleState = null;
-    let addSodaButton = null;
+    let buttonText = null;
     if (this.state.editing) {
       currentlyVisibleState = <EditSodaForm soda = {this.state.selectedSoda} onEditSoda = {this.handleEditingSodaInList}/>
-      addSodaButton = "Return to Soda List"
+      buttonText = "Return to Soda List";
     } else if (this.state.selectedSoda != null) {
       currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickDelete = {this.handleDeletingSoda} onClickEdit = {this.handleEditClick} />
-      addSodaButton = "Return to Soda List"
+      buttonText = "Return to Soda List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
-      addSodaButton = "Return to Soda List"
+      buttonText = "Return to Soda List";
     } else {
       currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} onSodaSelection={this.handleChangingSelectedSoda} />
-      addSodaButton = "Add Soda"
+      buttonText = "Add Soda";
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{addSodaButton}</button>
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

@@ -6,13 +6,18 @@ import ReusableForm from './ReusableForm';
 function NewSodaForm(props){
   function handleNewSodaFormSubmission(event) {
     event.preventDefault();
-    props.onNewSodaCreation({names: event.target.names.value, price: event.target.price.value, slogan: event.target.slogan.value, id: v4()})
+    props.onNewSodaCreation({
+      names: event.target.names.value, 
+      price: event.target.price.value, 
+      slogan: event.target.slogan.value, 
+      id: v4()})
   }
+
   return (
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleNewSodaFormSubmission}
-        addSodaButton="Help!" />
+        buttonText="Help!" />
     </React.Fragment>
   );
 }

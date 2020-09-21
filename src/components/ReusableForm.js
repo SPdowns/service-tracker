@@ -16,7 +16,7 @@ function ReusableForm(props) {
         <textarea
           name='slogan'
           placeholder="Type the soda's slogan." />
-        <button type='submit'>{props.addSodaButton}</button>
+        <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   )
@@ -24,7 +24,7 @@ function ReusableForm(props) {
 
 ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
-  addSodaButton: PropTypes.string
+  buttonText: PropTypes.string
 };
 
 export default ReusableForm;
