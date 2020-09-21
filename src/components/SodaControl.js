@@ -19,13 +19,13 @@ class SodaControl extends React.Component {
   handleClick = () => {
     if (this.state.selectedSoda != null) {
       this.setState({
-        formVisableOnPage: false,
+        formVisibleOnPage: false,
         selectedSoda: null,
         editing: false
       });
     } else {
       this.setState(prevState => ({
-        formVisableOnPage: !prevState.formVisableOnPage,
+        formVisibleOnPage: !prevState.formVisibleOnPage,
       }));
     }
   }
@@ -33,7 +33,7 @@ class SodaControl extends React.Component {
   handleAddingNewSodaToList = (newSoda) => {
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
     this.setState({masterSodaList: newMasterSodaList,
-      formVisableOnPage: false});
+      formVisibleOnPage: false});
   }
 
   handleChangingSelectedSoda = (id) => {
@@ -72,7 +72,7 @@ class SodaControl extends React.Component {
       currentlyVisibleState = <EditSodaForm soda = {this.state.selectedSoda} onEditSoda = {this.handleEditingSodaInList}/>
       buttonText = "Return to Soda List";
     } else if (this.state.selectedSoda != null) {
-      currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickDelete = {this.handleDeletingSoda} onClickEdit = {this.handleEditClick} />
+      currentlyVisibleState = <SodaDetail soda = {this.state.selectedSoda} onClickingDelete = {this.handleDeletingSoda} onClickEdit = {this.handleEditClick} />
       buttonText = "Return to Soda List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />
