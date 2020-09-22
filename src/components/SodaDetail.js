@@ -6,10 +6,10 @@ function SodaDetail(props){
   return (
     <React.Fragment>
       <h1>Sodas</h1>
-      <h3>{props.names} - {props.price}</h3>
-      <p><em>{props.slogan}</em></p>      
-      <button onClick={ props.onClickEdit }>Update Soda</button>
-      <button onClick={()=> props.onClickingDelete(soda.id)}>Close Soda</button>
+      <h3>{soda.names} - {soda.price}</h3>
+      <p><em>{soda.slogan}</em></p>      
+      <button onClick={ soda.onClickEdit }>Update Soda</button>
+      <button onClick={()=> onClickingDelete(soda.id)}>Close Soda</button>
       <hr/>
     </React.Fragment>
   );
