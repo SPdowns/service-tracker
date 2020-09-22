@@ -8,8 +8,8 @@ function SodaDetail(props){
       <h1>Sodas</h1>
       <h3>{soda.names} - {soda.price}</h3>
       <p><em>{soda.slogan}</em></p>      
-      <button onClick={ soda.onClickEdit }>Update Soda</button>
-      <button onClick={()=> onClickingDelete(soda.id)}>Close Soda</button>
+      <button onClick={ props.onClickEdit }>Update Soda</button>
+      <button onClick={()=> onClickingDelete(soda.id)}>Delete Soda</button>
       <hr/>
     </React.Fragment>
   );
