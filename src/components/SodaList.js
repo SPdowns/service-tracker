@@ -12,6 +12,7 @@ function SodaList(props){
         names={soda.names}
         price={soda.price}
         slogan={soda.slogan}
+        remainingCans={soda.remainingCans}
         id={soda.id}
         key={soda.id}/>
     )}

@@ -11,6 +11,7 @@ function EditSodaForm (props) {
       names: event.target.names.value,
       price: event.target.price.value,
       slogan: event.target.slogan.value,
+      remainingCans: event.target.remainingCans.value,
       id: soda.id});
   }
 
