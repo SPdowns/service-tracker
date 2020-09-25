@@ -10,7 +10,7 @@ function NewSodaForm(props){
       names: event.target.names.value, 
       price: event.target.price.value, 
       slogan: event.target.slogan.value, 
-      id: v4()})
+      id: v4()});
   }
 
   return (
