@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 function SodaDetail(props){
-  const {soda, onClickingDelete} = props
+  const {soda, onClickingDelete, onClickSell} = props
   return (
     <React.Fragment>
       <h1>Sodas</h1>
@@ -10,7 +10,7 @@ function SodaDetail(props){
       <p><em>{soda.slogan}</em></p>
       <p>{soda.remainingCans}</p>
       <button onClick={ props.onClickEdit }>Update Soda</button>
-      <button onClick={ props.onClickSell }>Sell One Soda</button>
+      <button onClick={()=> onClickSell(soda.id)}>Sell One Soda</button>
       <button onClick={()=> onClickingDelete(soda.id)}>Delete Soda</button>
       <hr/>
     </React.Fragment>
@@ -20,7 +20,8 @@ function SodaDetail(props){
 SodaDetail.propTypes = {
   soda: PropTypes.object,
   onClickingDelete: PropTypes.func,
-  onClickEdit: PropTypes.func
+  onClickEdit: PropTypes.func,
+  onClickSell: PropTypes.func
 };
 
 export default SodaDetail;
