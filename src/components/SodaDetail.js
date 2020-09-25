@@ -10,7 +10,7 @@ function SodaDetail(props){
       <p><em>{soda.slogan}</em></p>
       <p>{soda.remainingCans}</p>
       <button onClick={ props.onClickEdit }>Update Soda</button>
-      <button onClick={ props.onClickEdit }>Sell One Soda</button>
+      <button onClick={ props.onClickSell }>Sell One Soda</button>
       <button onClick={()=> onClickingDelete(soda.id)}>Delete Soda</button>
       <hr/>
     </React.Fragment>

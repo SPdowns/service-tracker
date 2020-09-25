@@ -65,6 +65,10 @@ class SodaControl extends React.Component {
     })
   }
 
+  handleSellingSoda = (id) => {
+    
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
