@@ -1,3 +1,18 @@
+# The Pharmacy
+### A React App
+====================
+
+This app is a simple React app for a Pharmacy to sell their soda's.
+
+Old Style Pharmacy's use to sell not only medication, but also soda's and sweets, ice cream and shakes, some would even sell clothing.
+
+![Screenshot](src/img/img-readme.png)
+
+### Technologies Used
+
+React and JSX
+Javascript and CSS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
