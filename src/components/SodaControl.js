@@ -69,11 +69,15 @@ class SodaControl extends React.Component {
     this.setState({editing: false});
   }
   
-  handleSellingCans = (sodaToSell) => {
-    const i
-    if(soda.remainingCans > 0) {
-    this.state.selectedSoda({ remainingCans: this.state.remainingCans - 1 }) 
-    }
+  handleSellingCansinList = (sodaToSell) => {
+    const editedMasterSodaList = this.state.masterSodaList
+      .filter(soda => soda.id !== this.state.selectedSoda.id)
+      .concat(sodaToSell);
+    this.setState({
+      masterSodaList: editedMasterSodaList,
+      editing: false,
+      selectedSoda: null
+    }) 
   }
 
   render(){
